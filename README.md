@@ -1,2 +1,2 @@
 # Tienda-de-arte
-proyecto de creación de mi primera página web
+[trabajo HTML](https://mery1984.github.io/Tienda-de-arte/)

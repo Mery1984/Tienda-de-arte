@@ -1,0 +1,306 @@
+/*GENERAL*/
+body{
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image:url(./../images/Fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*LOGOTIPO Y TÍTULO PRINCIPAL*/
+header{
+    background:transparent/* #0A3D62*/;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.logotipo2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.logotipo2 img{
+    height: 300px;
+    width: auto;
+    padding: 20px;
+    margin-left: 10px;
+}
+.logotipo2 img:hover{
+    transform: scale(1.3);
+    transition:all 1s ease-in-out;
+}
+
+.logotipo2 h1{
+    font-family: "Courgette", cursive;
+    font-size: 3.4rem;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 20px;
+    text-decoration-line: underline;
+    font-weight: 400;   
+}
+
+/*MENÚ DE NAVEGACIÓN*/
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+nav a{
+    color: white;
+    text-decoration:none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+nav .active{
+    color:#0A3D62;
+    background:white;
+    border-style: double;
+}
+
+nav a:hover{
+    background: #F0C14B;      
+    color: #0A3D62;
+}
+
+/*SECCIONES*/
+section {
+    padding: 60px;
+    margin: 50px auto;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+.hero {
+    background: linear-gradient(120deg, rgba(10, 61, 98, 0.7), rgba(20, 90, 141, 0.7));
+    color: white;
+    padding: 100px 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+.servicios, .sobre {
+    background: rgba(255, 255, 255, 0.75); /* blanco semitransparente */
+    border-radius: 16px;
+    padding: 70px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    backdrop-filter: blur(6px); /* efecto cristal */
+}
+.servicios h2, .sobre h2 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: #0A3D62;
+    border-left: 6px solid #F0C14B;
+    padding-left: 12px;
+}
+.servicios p, .sobre p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #444;
+}
+/*PRODUCTOS*/
+.PA{
+    color: rgb(231, 165, 176);
+    font-size: 3rem;
+}
+.Productos{
+    display: grid; /* crea la cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.item{
+    position: relative; /* para colocar el precio encima */
+    overflow:hidden; /* con esto no se sale el zoom */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.item:hover img{
+    transform: scale(1.1); /* zoom suave */
+    filter: brightness(0.7); /* oscurece para que el precio destaque */
+}
+
+.item::after{
+    content: attr(data-price); /* toma el precio del HTML */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0; /* oculto por defecto */
+    transition: opacity 0.3s ease;
+}
+
+.item:hover::after{ /*muestra el precio al pasar el ratón*/
+    opacity: 1;
+}
+h2{
+    margin-left: 30px;
+}
+
+/*FORMULARIO DE PRESUPUESTO*/
+.presupuesto{
+    color: rgb(231, 165, 176);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form{
+    background: white;
+    padding: 30px;
+    max-width: 400px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button{
+    padding: 12px;
+    background: #F0C14B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #d9aa3d;
+}
+
+/*CONTACTO*/
+/* Contenedor que actúa como botón */
+.mapa-box{
+    cursor:all-scroll;
+    display: inline-block;
+    position: relative;
+}
+
+/* Ocultamos el checkbox */
+.mapa-zoom{
+    display: none;
+}
+
+/* Imagen normal */
+.mapa{
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Fondo oscuro cuando se activa el zoom */
+.mapa-zoom:checked ~ .mapa{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* Fondo oscuro detrás */
+.mapa-zoom:checked ~ .mapa::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9998;
+}
+.contacto{
+    color: rgb(231, 165, 176);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+}
+main{
+    text-align: center;
+}
+main p{
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/*PIE DE PÁGINA*/
+footer{
+    background: #0A3D62;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+footer img{
+    width: 35px;
+    margin: 0 10px;
+    transition: all 1s ease-in-out;
+}
+
+footer img:hover{
+    transform: scale(1.5);
+    transition: all 1s ease-in-out;
+}
+footer a{
+    color:rgb(66, 8, 20);
+}
+
+

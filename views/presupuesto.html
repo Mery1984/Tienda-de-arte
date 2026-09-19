@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><!--inserción del logo-->
+        <div class="logotipo2">
+            <img src="./../images/logotipo2.png"
+            alt="logotipo"
+            width="1000"
+            height="750">
+            <h1>Álvarez-Serrano: <em>Tienda de arte</em></h1>
+        </div>
+         <!--De nuevo aparece el menú-->
+        <nav>
+            <ul>
+                <li><a href="./../index.html"                   target="_self">Inicio</a></li>
+                <li><a href="./productos.html"                  target="_self">Productos</a></li>
+                <li><a href="./presupuesto.html" class="active" target="_self">Presupuesto</a></li>
+                <li><a href="./contacto.html"                   target="_parent">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h2 class="presupuesto">Solicitar Presupuesto</h2>
+
+    <form>
+        <a>Nombre:</a>
+            <input type="text" maxlength="" placeholder="Nombre y apellidos"
+            required
+            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+            nombre="El nombre solo puede contener letras">
+
+        <a>Email:</a>
+            <input type="email" name="correo" placeholder="Correo electrónico"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
+            title="Introduce un correo electrónico, por ejemplo nombre@correo.com">
+
+        <a>Teléfono:</a>
+            <input type="tel" name= "teléfono" maxlength="9" minlength="9"
+            placeholder="Teléfono"
+            required
+            pattern="[0-9]+"
+            title="Introduce un número de teléfono">
+
+        <a>Solicite más información:</a>
+            <textarea maxlength="500" required></textarea>
+
+        <a href="./../images/Aviso-Legal-Web.pdf"></ahref>
+            <input type="checkbox" required>
+            Acepto la Política de Privacidad
+        </a>
+
+        <button type="submit">Enviar</button>
+    </form>
+    </main>
+    <footer>
+    <div class="redes">
+        <a href="https://instagram.com"><img src="./../images/Instagram.png" alt="Instagram"width="250"></a>
+        <a href="https://facebook.com"><img src="./../images/facbook.png" alt="Facebook"width="250"></a>
+        <a href="https://twitter.com"><img src="./../images/twitter.png" alt="Twitter"width="250"></a>
+    </div>
+
+    <p>Álvarez Serrano – Tienda de Arte</p>
+    <p>Calle de la Creatividad 42, Móstoles, Madrid</p>
+    <p><a href="./../images/Aviso-Legal-Web.pdf"target="_blank">@copy Aviso Legal</a></p>
+</footer>
+</body>
+
+
+</html>
